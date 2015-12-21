@@ -1,44 +1,3 @@
-// The Queue ADT -- linked list implementation
-
-class Node {
-
-   private String data;
-   private Node next;
-
-   public Node () {
-     //this(0, null);
-   }
-
-   public Node (String d) {
-     data = d;
-   }
-  
-   public Node (String d, Node n) {
-     data = d;
-     next = n;
-   }
-
-   public void setData (String newData) {
-     data = newData;
-   }
-
-   public void setNext (Node newNext) {
-     next = newNext;
-   } 
-
-   public String getData () {
-     return data;
-   }
-
-   public Node getNext () {
-      return next;
-   }
-
-   public void displayNode () {
-      System.out.print (data);
-   }
-}
-
 class LLQueueADT implements LLQueue {
 
    private int size;
@@ -84,4 +43,18 @@ class LLQueueADT implements LLQueue {
    public int size () {
       return size;
    }
+    
+    public boolean found(String data)
+    {
+        Node current = front;
+        boolean found = false;
+        
+        while(current != null)
+        {
+            if(current.equals(data))
+                found = true;
+            current = current.getNext();
+        }
+        return found;
+    }
 }

@@ -4,7 +4,7 @@ class BooleanNode {
    private BooleanNode next;
 
    public BooleanNode () {
-     this(0, null);
+     //this(0, null);
    }
 
    public BooleanNode (boolean d) {

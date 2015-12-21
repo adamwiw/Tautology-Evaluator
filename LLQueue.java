@@ -1,4 +1,4 @@
-public interface LLQueue {
+kpublic interface LLQueue {
 
    public void enqueue (String item);
    public String dequeue();
